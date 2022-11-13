@@ -5,37 +5,48 @@ import News from './pages/news.js';
 import Callback from './pages/callBack.js';
 import Contacts from './pages/contacts.js';
 
-const home = <Home />
-const news = <News />
-const callBack = <Callback />
-const contacts = <Contacts />
 
 class App extends React.Component {
   
   constructor (){
     super()
 
-    this.state = {currentPage: home}
+    this.state = {currentPage: "home"}
   }
 
-  heandlerHome = (e) => {
+  handlerHome = (e) => {
     e.preventDefault()
-    this.setState({currentPage: home})
+    this.setState({currentPage: "home"})
   }
 
-  heandlerNews = (e) => {
+  handlerNews = (e) => {
     e.preventDefault()
-    this.setState({currentPage: news})
+    this.setState({currentPage: "news"})
   }
 
-  heandlerCallBack = (e) => {
+  handlerCallBack = (e) => {
     e.preventDefault()
-    this.setState({currentPage: callBack})
+    this.setState({currentPage: "callBack"})
   }
 
-  heandlerContacts = (e) => {
+  handlerContacts = (e) => {
     e.preventDefault()
-    this.setState({currentPage: contacts})
+    this.setState({currentPage: "contacts"})
+  }
+
+  renderCurrentPage = () => {
+    switch (this.state.currentPage) {
+      case 'home':
+        return <Home />;
+      case 'news':
+        return <News />;
+      case 'callBack':
+        return <Callback />;
+      case 'contacts':
+        return <Contacts />;
+      default:
+        return <Home />
+    }
   }
   
   render () {
@@ -43,19 +54,19 @@ class App extends React.Component {
       <header className='App-header'>
         <ul className='App-ul'>
           <li className='App-li'>
-            <a className='App-link' onClick={this.heandlerHome} href = "/" >Home</a>
+            <a className='App-link' onClick={this.handlerHome} href = "/" >Home</a>
           </li>
           <li className='App-li'>
-            <a className='App-link' onClick={this.heandlerNews} href="/">News</a>
+            <a className='App-link' onClick={this.handlerNews} href="/">News</a>
           </li>
           <li className='App-li'>
-            <a className='App-link' onClick={this.heandlerCallBack} href="/">CallBack</a>
+            <a className='App-link' onClick={this.handlerCallBack} href="/">CallBack</a>
           </li>
           <li className='App-li'>
-            <a className='App-link' onClick={this.heandlerContacts} href="/">Contacts</a>
+            <a className='App-link' onClick={this.handlerContacts} href="/">Contacts</a>
           </li>
         </ul>
-        <span>{this.state.currentPage}</span>
+        <div>{this.renderCurrentPage()}</div>
       </header>
     );
   }
