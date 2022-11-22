@@ -1,0 +1,10 @@
+.square, .shiftSquare{
+  width: 100px;
+  height: 100px;
+  background-color: #ffc0cb;
+  border: 1px solid;
+}
+
+.shiftSquare{
+  translate: 200px;
+}
