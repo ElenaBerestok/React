@@ -1,24 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AlbumsFirstWay from './task1/Albums.firstWay';
-import AlbumsSecondWay from './task1/Albums.secondWay'
-import { DataContext, DataProvider } from './task1/DataContext';
+import ClassAlbums from './task1/ClassAlbums';
+import ClassWithContext from './task1/ClassWithContext'
+import { DataProvider } from './task1/DataContext';
 import FuncAlbums from './task2/FuncAlbums';
-import FuncAlbumsSecondWay from './task2/FuncAlbumsSecondWayy';
+import FuncAlbumsWithContext from './task2/FuncAlbumsWithContext';
 import Ref from './task3/Ref';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <AlbumsFirstWay /> */}
+    {/* <ClassAlbums /> */}
     {/* <DataProvider>
-      <AlbumsSecondWay />
+      <ClassWithContext />
     </DataProvider>  */}
     <FuncAlbums/>
     {/* <DataProvider>
-      <FuncAlbumsSecondWay/>
+      <FuncAlbumsWithContext/>
     </DataProvider> */}
-    
     {/* <Ref /> */}
   </React.StrictMode>
   // document.getElementById("root")

@@ -1,29 +1,29 @@
 import React, {useState, useEffect} from "react";
+import RenderAlbums from '../task1/RenderAlbums'
 
 const FuncAlbums = () => {
-    const [albums, setAlbums] = useState(Array);
+    const [albums, setAlbums] = useState([]);
 
     useEffect(() => {
         fetch ('https://jsonplaceholder.typicode.com/albums')
-            .then(response =>{
-                if(response.ok) {
-                    const result = response.json()
-                    setAlbums({albums: result});
-                } else {
-                    const {error} = response.json()
-                    throw new Error(error)
-                }
-            })
-    })
+        .then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw new Error('Error')
+            }
+        })
+        .then((result) => {
+            setAlbums(result);
+        })
+        .catch((err) => {
+            throw new Error(err.message)
+        })
+
+    }, [])
 
     return (
-        <div>
-            {albums.map(album => (
-              <div key={album.id}>
-                {album.userId} - {album.id} - {album.title}
-              </div>
-            ))}
-        </div>
+        <RenderAlbums data={albums}/>
     )
     
 }
