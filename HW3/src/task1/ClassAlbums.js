@@ -1,28 +1,12 @@
 import React from "react";
 import RenderAlbums from "./RenderAlbums";
+import withFetch from './withFetch';
 
 class ClassAlbums extends React.Component {
-    state = {
-      albums: [],
-    }
-
-    componentDidMount(){
-      fetch ('https://jsonplaceholder.typicode.com/albums')
-        .then(response => response.json())
-        .then(
-          (result) => {this.setState({
-            albums: result,
-            });
-          }
-        )
-        .catch((err) => {
-          throw new Error(err.message)
-        })
-    };
 
   render (){
 
-    const {albums} = this.state;
+    const {albums} = this.props;
 
       return (
         <RenderAlbums data={albums}/>
@@ -30,4 +14,4 @@ class ClassAlbums extends React.Component {
   }
 }
 
-export default ClassAlbums;
+export default withFetch(ClassAlbums);

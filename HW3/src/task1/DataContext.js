@@ -1,30 +1,19 @@
 import React from "react";
+import withFetch from './withFetch';
 
 export const DataContext = React.createContext();
 
-export class DataProvider extends React.Component{
-    state = {
-        albums: [],
-    }
-
-    componentDidMount(){
-        fetch ('https://jsonplaceholder.typicode.com/albums')
-            .then(response => response.json())
-            .then(
-                (result) => {this.setState({
-                    albums: result,
-                  });
-                }
-            )
-    };
+class DataProvider extends React.Component{
 
     render() {
 
-        return <DataContext.Provider value={this.state.albums}>
+        return <DataContext.Provider value={this.props.albums}>
             {this.props.children}
         </DataContext.Provider>
     }
 }
+
+export default withFetch(DataProvider);
 
 
 

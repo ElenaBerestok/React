@@ -1,24 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ClassAlbums from './task1/ClassAlbums';
-import ClassWithContext from './task1/ClassWithContext'
-import { DataProvider } from './task1/DataContext';
-import FuncAlbums from './task2/FuncAlbums';
-import FuncAlbumsWithContext from './task2/FuncAlbumsWithContext';
+import AppClass from './task1/AppClass';
+import AppFunc from './task2/AppFunc'
 import Ref from './task3/Ref';
+import VideoPlayer from './task3/VideoPlayer/VideoPlayer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <ClassAlbums /> */}
-    {/* <DataProvider>
-      <ClassWithContext />
-    </DataProvider>  */}
-    <FuncAlbums/>
-    {/* <DataProvider>
-      <FuncAlbumsWithContext/>
-    </DataProvider> */}
+    {/* <AppClass /> */}
+    {/* <AppFunc/> */}
     {/* <Ref /> */}
+    <VideoPlayer/>
   </React.StrictMode>
   // document.getElementById("root")
 );

@@ -1,0 +1,30 @@
+.container{
+    max-width: 700px;
+}
+  
+video{
+    max-width: 700px;
+    height: 900xp;
+}
+
+.wrapperButton{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.playing, .pause {
+    background-color: rgb(237, 140, 108);
+    display: block;
+    margin: 0 auto;
+    color: white;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid 1px  rgb(237, 140, 108);
+    text-align: center;
+}
+  
+.playing:hover, .pause:hover{
+    background-color: pink;
+}
