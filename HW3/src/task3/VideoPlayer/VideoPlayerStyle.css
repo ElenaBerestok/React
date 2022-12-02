@@ -12,7 +12,40 @@ video{
     justify-content: space-between;
 }
   
-.playing, .pause {
+
+
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 93%;
+}
+
+input::-webkit-slider-runnable-track{
+    height: 7px;
+    background-color: rgb(237, 140, 108);
+}
+
+input::-webkit-slider-runnable-track:focus, input::-webkit-slider-thumb{
+    border: none;
+}
+
+input::-webkit-slider-thumb{
+    /* background-color: rgb(255, 119, 0); */
+    background-color: pink;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: 4px;
+    margin-top: -5px;
+}
+
+span{
+    color:rgb(237, 140, 108);
+}
+
+.button{
     background-color: rgb(237, 140, 108);
     display: block;
     margin: 0 auto;
@@ -23,8 +56,10 @@ video{
     font-weight: bold;
     border: solid 1px  rgb(237, 140, 108);
     text-align: center;
+    margin-top: 15px;
 }
   
-.playing:hover, .pause:hover{
+.button:hover{
     background-color: pink;
 }
+
