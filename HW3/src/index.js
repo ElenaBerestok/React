@@ -8,9 +8,9 @@ import VideoPlayer from './task3/VideoPlayer/VideoPlayer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <AppClass /> */}
-    {/* <AppFunc/> */}
-    {/* <Ref /> */}
+    <AppClass />
+    <AppFunc/>
+    <Ref />
     <VideoPlayer/>
   </React.StrictMode>
   // document.getElementById("root")

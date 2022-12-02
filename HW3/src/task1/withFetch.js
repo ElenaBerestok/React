@@ -17,7 +17,7 @@ const withFetch = (WrappedComponent) => {
                 }
               )
               .catch((err) => {
-                throw new Error(err.message)
+                alert(err.message)
               })
         };
 

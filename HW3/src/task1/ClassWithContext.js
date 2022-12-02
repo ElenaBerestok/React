@@ -1,5 +1,5 @@
-import React from "react";
 import  {DataContext}  from "./DataContext";
+import React from "react";
 import RenderAlbums from "./RenderAlbums";
 
 
@@ -10,7 +10,6 @@ class ClassWithContext extends React.Component {
       <DataContext.Consumer>
         {(albums) => {
           return (
-            // RenderAlbums(albums)
             <RenderAlbums data={albums}/>
           )
         }}

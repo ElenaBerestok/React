@@ -1,8 +1,7 @@
+import DataProvider from './DataContext';
 import React from "react";
 import ClassAlbums from "./ClassAlbums";
 import ClassWithContext from './ClassWithContext';
-import DataProvider from './DataContext';
-
 
 export default class AppClass extends React.Component{
     render (){

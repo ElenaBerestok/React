@@ -17,7 +17,7 @@ const FuncAlbums = () => {
             setAlbums(result);
         })
         .catch((err) => {
-            throw new Error(err.message)
+            alert(err.message)
         })
 
     }, [])

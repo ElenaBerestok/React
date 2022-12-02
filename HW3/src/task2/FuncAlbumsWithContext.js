@@ -1,5 +1,5 @@
-import React from "react";
 import { DataContext } from "../task1/DataContext";
+import React from "react";
 import RenderAlbums from "../task1/RenderAlbums";
 
 const FuncAlbumsWithContext = () => {

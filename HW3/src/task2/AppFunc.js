@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import DataProvider from '../task1/DataContext';
+import React from "react";
 import FuncAlbums from "./FuncAlbums";
 import FuncAlbumsWithContext from "./FuncAlbumsWithContext";
-import DataProvider from '../task1/DataContext';
 
 const AppFunc = () => {
     return (

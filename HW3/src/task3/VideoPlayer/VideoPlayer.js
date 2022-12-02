@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import nature from './video/nature.mp4';
+import nature from '../../assets/nature.mp4';
 import './VideoPlayerStyle.css';
 
 const VideoPlayer = () => {
@@ -38,11 +38,11 @@ const VideoPlayer = () => {
         setState({...state})  
     }
 
-    onplay = () => {
+    const onplay = () => {
         videoRef.current.play()
     }
 
-    onpause = () => {
+    const onpause = () => {
         videoRef.current.pause()
     }
 

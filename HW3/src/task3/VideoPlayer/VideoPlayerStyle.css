@@ -11,8 +11,6 @@ video{
     display: flex;
     justify-content: space-between;
 }
-  
-
 
 input{
     -webkit-appearance: none;
