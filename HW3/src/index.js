@@ -13,5 +13,4 @@ root.render(
     <Ref />
     <VideoPlayer/>
   </React.StrictMode>
-  // document.getElementById("root")
 );
