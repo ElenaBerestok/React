@@ -18,7 +18,7 @@ const DataMaker = ({url, renderDataUrl}) => {
             setPosts(result)
         })
         .catch((err) => {
-            throw new Error(err.message)
+            alert(err.message)
             }
         )
 
