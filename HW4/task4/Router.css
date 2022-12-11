@@ -1,0 +1,35 @@
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: beige;
+}
+
+.link{
+    display: inline-flex;
+    justify-content: space-between;
+    
+    text-decoration: none;
+    color: black;
+
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.link:first-of-type{
+    margin-left: 15px;
+}
+
+.link:last-of-type{
+    margin-right: 0px;
+}
+
+.link:hover{
+    color: rgb(14, 14, 189);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.home{
+    background-color: yellow;
+    padding: 20px;
+}
