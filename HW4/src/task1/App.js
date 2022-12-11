@@ -1,5 +1,5 @@
 import React from "react";
-import withUsers from "./withUsers";
+import withUsers from "../HOCs/withUsers";
 
 const  App = ({users}) => {
     return(

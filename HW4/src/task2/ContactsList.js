@@ -1,5 +1,5 @@
 import React from "react";
-import LoaderHOC from "./LoaderHOC";
+import LoaderHOC from "../HOCs/LoaderHOC";
 import Contact from "./Contact";
 
 const ContactsList = ({contacts}) => {
@@ -7,7 +7,7 @@ const ContactsList = ({contacts}) => {
         <div>
             {contacts.map((contact) => (
                 <div key={contact.id}>
-                    <Contact props={contact}/>
+                    <Contact contact={contact}/>
                 </div>
             ))}
         </div>

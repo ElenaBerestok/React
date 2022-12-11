@@ -1,13 +1,13 @@
 import React from "react";
-import LoaderHOC from "./LoaderHOC";
 
-const Contact = ({name, thumbnail}) => {
+const Contact = ({contact}) => {
+   
     return (
         <div>
-            <div>{name}</div>
-            <img src={thumbnail} />
+            <div>{contact.name}</div>
+            <img src={contact.thumbnail} />
         </div>
     )
 }
 
-export default LoaderHOC(Contact);
+export default Contact;

@@ -1,7 +1,8 @@
 import React from "react";
 import './Router.css';
 import App from '../task1/App';
-import { UsersProvider } from "../task1/UsersContext";
+import ContactsList from "../task2/ContactsList";
+import { UsersProvider } from "../context/UsersContext";
 import AppPropsRender from "../task3/AppPropsRender";
 
 import { Link, Route, Routes } from "react-router-dom";
@@ -37,7 +38,7 @@ const RouterApp = () => {
             <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/First_task' element={<FirstTask />}/>
-                {/* <Route path='/Second_task' element={}/> */}
+                <Route path='/Second_task' element={<ContactsList />}/>
                 <Route path='/Third_task' element={ <AppPropsRender />}/>
             </Routes>
         </div>
