@@ -9,7 +9,13 @@ export class UsersProvider extends React.Component{
 
     componentDidMount(){
         fetch ('https://jsonplaceholder.typicode.com/users')
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error ('error')
+                }
+            })
             .then(
                 (result) => {this.setState({
                     users: result,

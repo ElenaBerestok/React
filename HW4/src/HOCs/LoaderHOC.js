@@ -18,15 +18,13 @@ const LoaderHOC = (WrappedComponent) => {
         filterContacts(array){
             const filterContacts = array.results;
 
-            let newContact = filterContacts.map((filterContact) => {
-                return filterContact = {
+            return filterContacts.map((filterContact) => {
+                return {
                     name: `${filterContact.name.first} ${filterContact.name.last}`,
                     thumbnail: `${filterContact.picture.thumbnail}`,
                     id: `${filterContact.id.value}`
                 }
             })
-
-            return newContact
         }
 
         componentDidMount(){
@@ -43,13 +41,13 @@ const LoaderHOC = (WrappedComponent) => {
                 return contacts
             })
             .then((contacts) => {
-                withDelay(2000)(contacts)
-                this.setState({loaded : true})
-                return contacts
+                return withDelay(2000)(contacts)
             })
             .then((contacts) => {
-                this.setState({contacts: contacts})
-                return contacts
+                this.setState({
+                    contacts: contacts,
+                    loaded : true
+                })
             })
             .catch((err) => {
                 alert(err.message)
