@@ -35,11 +35,14 @@ const RouterApp = () => {
         <div>
             <div className="header">
                 {links.map(({id, path, title}) => (
-                    <NavLink style={({isActive}) => {
-                        return {
-                            color : isActive ? 'blue' : 'black'
-                        }
-                    }} className="link" key={id} to={path}>{title}</NavLink>
+                    <NavLink 
+                        style={({isActive}) => ({color : isActive ? 'blue' : 'black'})} 
+                        className="link" 
+                        key={id} 
+                        to={path}
+                    >
+                        {title}
+                    </NavLink>
                 ))}
             </div>
             <Routes>
